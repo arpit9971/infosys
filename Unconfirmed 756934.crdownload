@@ -1,0 +1,31 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[4]:
+
+
+str1=input()
+str2=""
+l1=str1.split(',')
+for i in l1:
+    temp=i.split(':')
+    name=temp[0]
+    number=temp[1]
+    length=len(name)
+    max=0
+    for digit in number:
+        if int(digit)<=length:
+            if max<int(digit):
+                max=int(digit)
+    if max==0:
+        str2=str2+'X'
+    else:
+        str2=str2+name[max-1]
+print(str2)
+
+
+# In[ ]:
+
+
+
+
